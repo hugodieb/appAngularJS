@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-br" ng-app="appangular">
 <head>
     <base href="/">
     <meta charset="UTF-8">
@@ -11,14 +10,15 @@
     <script src="js/lib/angular.min.js"></script>
     <script src="js/lib/angular-animate.min.js"></script>
     <script src="js/lib/angular-route.min.js"></script>
-    <script src="js/lib/angular-resource.min.js"></script>    
+    <script src="js/lib/angular-resource.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/controllers/fotos-controller.js"></script>
 </head>
-
-<body>
+<body ng-controller=FotoController>
     <div class="container">
-        <h2 class="center">AngularJS</h2>
+        <h1 class="text-center">AngularJS</h1>
+        <img class="img-responsive center-block" src="{{foto.url}}" alt="{{foto.titulo}}" >
     </div>
     <!-- fim container -->
 </body>
-
 </html>
