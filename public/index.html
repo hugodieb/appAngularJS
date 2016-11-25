@@ -15,9 +15,22 @@
     <script src="js/controllers/fotos-controller.js"></script>
 </head>
 <body ng-controller=FotoController>
-    <div class="container">
-        <h1 class="text-center">AngularJS</h1>
-        <img class="img-responsive center-block" src="{{foto.url}}" alt="{{foto.titulo}}" >
+    <div class="container">        
+        <div class="jumbotron">
+            <h1 class="text-center">AngularJS</h1>
+        </div>
+        
+        <div ng-repeat="foto in fotos" class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">{{foto.titulo}}</h3>
+            </div>
+            
+            <div class="panel-body">
+                <img class="img-responsive center-block" src="{{foto.url}}" alt="{{foto.titulo}}">
+            </div>
+            
+        </div>
+        <!-- fim container -->        
     </div>
     <!-- fim container -->
 </body>
